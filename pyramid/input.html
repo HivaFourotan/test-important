@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شروع تخمین کنکور | پیرامید</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="پیرامید">
+      <svg viewBox="0 0 48 48" fill="none" width="34" height="34"><path d="M24 4 L44 40 H4 Z" fill="#6366f1"/><path d="M24 4 L34 22 L14 22 Z" fill="#3b82f6"/><path d="M24 14 L44 40 H30 L20 22 Z" fill="#818cf8"/></svg>
+      <span>پیرامید</span>
+    </a>
+
+    <nav aria-label="منوی اصلی">
+      <ul class="main-nav">
+        <li><a href="index.html" class="nav-link">صفحه اصلی</a></li>
+        <li><a href="dashboard.html" class="nav-link">پیشخوان من</a></li>
+        <li><a href="calculator.html" class="nav-link">ماشین‌حساب درصد</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle-btn" type="button" aria-label="تغییر تم"></button>
+      <a href="profile.html" class="user-pill">
+        <span class="avatar">د</span>
+        <b>دانش آموز مک</b>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="form-wrap">
+  <div class="form-card">
+    <h2>شروع تخمین کنکور</h2>
+    <p>گروه آزمایشی و درصد دروس خود را وارد کنید تا تراز و رتبه‌ی تخمینی محاسبه شود.</p>
+
+    <form action="dashboard.html" method="GET" autocomplete="off" aria-label="فرم تخمین کنکور">
+      <div class="form-field">
+        <label for="field">گروه آزمایشی</label>
+        <select id="field" name="field" required>
+          <option>تجربی</option>
+          <option>ریاضی</option>
+          <option>انسانی</option>
+          <option>هنر</option>
+          <option>زبان</option>
+        </select>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="persian">درصد ادبیات فارسی</label>
+          <input type="number" id="persian" name="persian" placeholder="مثلا ۷۵" min="0" max="100" step="0.01" required>
+        </div>
+
+        <div class="form-field">
+          <label for="arabic">درصد عربی</label>
+          <input type="number" id="arabic" name="arabic" placeholder="مثلا ۶۰" min="0" max="100" step="0.01" required>
+        </div>
+
+        <div class="form-field">
+          <label for="biology">درصد زیست‌شناسی</label>
+          <input type="number" id="biology" name="biology" placeholder="مثلا ۸۰" min="0" max="100" step="0.01" required>
+        </div>
+
+        <div class="form-field">
+          <label for="chemistry">درصد شیمی</label>
+          <input type="number" id="chemistry" name="chemistry" placeholder="مثلا ۷۰" min="0" max="100" step="0.01" required>
+        </div>
+
+        <div class="form-field" style="grid-column: 1 / -1;">
+          <label for="math">درصد ریاضی</label>
+          <input type="number" id="math" name="math" placeholder="مثلا ۶۰" min="0" max="100" step="0.01" required>
+        </div>
+      </div>
+
+      <p class="form-hint">درصدها باید عددی بین ۰ تا ۱۰۰ باشند.</p>
+
+      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">
+        مشاهده نتیجه تخمین
+      </button>
+    </form>
+
+    <p class="form-note">با ادامه، از فرمول‌ها و داده‌های به‌روز پیرامید برای محاسبه‌ی تراز استفاده می‌شود.</p>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
