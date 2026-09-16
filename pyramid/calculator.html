@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ماشین‌حساب هوشمند کنکور | پیرامید</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 48 48" fill="none" width="34" height="34"><path d="M24 4 L44 40 H4 Z" fill="#6366f1"/><path d="M24 4 L34 22 L14 22 Z" fill="#3b82f6"/><path d="M24 14 L44 40 H30 L20 22 Z" fill="#818cf8"/></svg>
+      <span>پیرامید</span>
+    </a>
+    <div class="header-actions">
+      <button class="theme-toggle-btn" type="button" aria-label="تغییر تم"></button>
+      <a href="index.html" class="btn btn-outline" style="padding:8px 18px;">صفحه اصلی</a>
+    </div>
+  </div>
+</header>
+
+<div class="container calc-wrap">
+  <div class="glass-card">
+    <h2>ماشین‌حساب تخصصی کنکور و معدل</h2>
+    <p>محاسبه آنی درصد دروس بر اساس نمره منفی و فرمول استاندارد سنجش.</p>
+
+    <!-- فرم محاسبه درصد کنکور -->
+    <form id="konkur-calc-form" style="margin-bottom: 30px;">
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="calc-total">تعداد کل سوالات</label>
+          <input type="number" id="calc-total" value="30" min="1" required>
+        </div>
+        <div class="form-field">
+          <label for="calc-correct">تعداد پاسخ‌های درست</label>
+          <input type="number" id="calc-correct" value="20" min="0" required>
+        </div>
+        <div class="form-field" style="grid-column: 1 / -1;">
+          <label for="calc-wrong">تعداد پاسخ‌های غلط</label>
+          <input type="number" id="calc-wrong" value="4" min="0" required>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg-soft); padding:16px 20px; border-radius:var(--radius); margin-bottom:18px;">
+        <span style="font-weight:700;">درصد محاسبه‌شده:</span>
+        <b id="konkur-calc-result" style="font-size:24px; color:var(--primary);">۶۲.۲۲ ٪</b>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%;">محاسبه درصد درس</button>
+    </form>
+
+    <hr style="border:0; border-top:1px solid var(--glass-border); margin: 30px 0;">
+
+    <h3 style="font-size:18px; font-weight:800; margin-bottom:16px;">ماشین‌حساب محاسباتی</h3>
+    <!-- ماشین حساب علمی -->
+    <div class="calc-screen">
+      <div class="calc-history"></div>
+      <div class="calc-output">0</div>
+    </div>
+
+    <div class="calc-grid">
+      <button type="button" class="calc-btn op" data-action="clear">C</button>
+      <button type="button" class="calc-btn op" data-action="backspace">⌫</button>
+      <button type="button" class="calc-btn op" data-val="%">%</button>
+      <button type="button" class="calc-btn op" data-val="÷">÷</button>
+
+      <button type="button" class="calc-btn" data-val="7">7</button>
+      <button type="button" class="calc-btn" data-val="8">8</button>
+      <button type="button" class="calc-btn" data-val="9">9</button>
+      <button type="button" class="calc-btn op" data-val="×">×</button>
+
+      <button type="button" class="calc-btn" data-val="4">4</button>
+      <button type="button" class="calc-btn" data-val="5">5</button>
+      <button type="button" class="calc-btn" data-val="6">6</button>
+      <button type="button" class="calc-btn op" data-val="-">-</button>
+
+      <button type="button" class="calc-btn" data-val="1">1</button>
+      <button type="button" class="calc-btn" data-val="2">2</button>
+      <button type="button" class="calc-btn" data-val="3">3</button>
+      <button type="button" class="calc-btn op" data-val="+">+</button>
+
+      <button type="button" class="calc-btn" data-val="0">0</button>
+      <button type="button" class="calc-btn" data-val=".">.</button>
+      <button type="button" class="calc-btn action" style="grid-column: span 2;" data-action="calculate">=</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
